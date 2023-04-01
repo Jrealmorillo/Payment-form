@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment form</title>
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div class="container p-4">
+    <div class="container fw-semibold border p-0">
+      <!-- Navbar -->
+      <nav class="navbar bg-body-tertiary border">
+        <div class="container-fluid">
+          <span class="navbar-brand h1 fs-2">Payment form example</span>
+        </div>
+      </nav>
+    
+
+      <!-- Alert -->
+      <div class="alert alert-danger fw-semibold text-danger-emphasis m-4" role="alert" >
+        Some fields are missing
+      </div>
+
+      <!-- Form -->
+      <form class="row g-3 d-flex m-4">
+
+
+      <!-- Card, CVC & Amount -->
+
+        <div class="col-md-5">
+          <label for="card-number" class="form-label">Card #</label>
+          <input type="text" class="form-control" id="card-number" placeholder="XXXXXXXXXXXXXXXX">
+        </div>
+        <div class="col-md-3">
+          <label for="CVC-number" class="form-label">CVC #</label>
+          <input type="text" class="form-control" id="CVC-number" placeholder="0000">
+        </div>
+
+        <div class="col-md-4 d-flex flex-column">
+          <label for="amount" class="form-label">Amount</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+            <input type="text" class="form-control" id="amount" placeholder="Amount">
+          </div>
+        </div>
+        
+      <!-- Personal details -->
+
+        <div class="col-md-6">
+          <label for="first-name" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="first-name">
+        </div>
+        <div class="col-md-6">
+          <label for="last-name" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="last-name">
+        </div>
+
+        <div class="col-md-6">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city">
+        </div>
+        <div class="col-md-3">
+          <label for="state" class="form-label">State</label>
+          <select id="state" class="form-select">
+            <option selected>Pick a state</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="postal-code" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="postal-code">
+        </div>
+
+      <!-- Cards accepted-->
+
+        <div class="col-md-6 d-flex flex-column">
+          <label for="cards" class="mb-3">We accept:</label>
+          <div class="d-flex">
+            <button type="button" class="btn btn-secondary btn-lg col-md-6 d-flex justify-content-between p-2">
+              <label for="mastercard">
+                <input type="radio" name="card" id="mastercard" class="mx-2"><i class="fab fa-cc-mastercard"></i>
+              </label>
+              <label for="visa">
+                <input type="radio" name="card" id="visa" class="mx-2"><i class="fab fa-cc-visa"></i>
+              </label>
+              <label for="diners-club">
+                <input type="radio" name="card" id="diners-club" class="mx-2"><i class="fab fa-cc-diners-club"></i>
+              </label>
+              <label for="amex">
+                <input type="radio" name="card" id="amex" class="mx-2"><i class="fab fa-cc-amex"></i>
+                </label>
+            </button>
+          </div>
+        </div>
+        
+
+      <!-- Message -->
+
+        <div class="col-md-6 d-flex flex-column">
+          <label for="textarea" class="form-label">Message</label>
+          <textarea class="form-control rounded" style="height: 100px" id="textarea"></textarea>
+          <p class="text-body-tertiary">Add any notes here.</p>
+        </div>
+      </form>
+
+
+      <!-- Bottom buttons -->
+      <nav class="navbar bg-body-tertiary border">
+        <div class="container-fluid justify-content-end">
+          <button type="button" class="btn btn-secondary text-white m-1 fw-semibold" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .75rem; --bs-btn-font-size: 1.1rem;">Cancel</button>
+          <button type="button" class="btn btn-primary text-white m-1 fw-semibold" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .75rem; --bs-btn-font-size: 1.1rem;">Send</button>
+        </div>
+      </nav>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>
